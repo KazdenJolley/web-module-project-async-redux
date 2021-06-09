@@ -1,4 +1,4 @@
-import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL, ADD_PHOTO } from '../actions';
+import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL } from '../actions';
 
 const initialState = {
   currentPhotoURL: '',
@@ -25,11 +25,6 @@ export const reducer = (state = initialState, action) => {
         ...state,
         isFetching: false,
         error: action.payload
-      })
-    case(ADD_PHOTO):
-      return ({
-        ...state,
-        likedPhotoURLs: [...state.likedPhotoURLs, action.payload]
       })
     default:
       return state;

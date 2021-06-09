@@ -15,7 +15,6 @@ const Dog = props => {
     dispatch(getDog());
   }
 
-
   if (error) {
     return <h2>We got an error: {error}</h2>;
   }
